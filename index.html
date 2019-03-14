@@ -3,9 +3,9 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>QuestionPourUnMoignon By Le Kalbar</title>
+	<title>QuestionPour1oignon By Le Kalbar</title>
 	<meta name="author" content="Dr.Redfish" />
-	<meta name="description" content="QuestionPourunChampignon- Le quizz." />
+	<meta name="description" content="QuestionPour1oignon- Le quizz." />
 	<meta name="keywords"  content="Quizz,Apero,LeKalbar,amical,Jeux,evenement" />
 	<meta name="Resource-type" content="Document" />
 
@@ -46,6 +46,11 @@
 			position:relative;
       transition: all 600ms ease;
 		}
+   /* #section2 h2{
+      position:relative;
+      transition: all 600ms ease;
+      font-size: 20px;
+    }*/
 		#section2 p{
 			opacity: 0;
       transition: all 600ms ease;
@@ -92,11 +97,11 @@
 
 
   <script type="text/javascript">
-    function reveal1(){
-      reponse = document.getElementById('reponse1');
-      reponseText= reponse.innerText;
-      alert(reponseText);
-    }
+    // function reveal1(){
+    //   reponse = document.getElementById('reponse1');
+    //   reponseText= reponse.innerText;
+    //   alert(reponseText);
+    // }
 
     function reveal2(){
       reponse = document.getElementById('reponse2');
@@ -120,36 +125,46 @@
       <p>Par le Kalbar <a href="https://www.facebook.com/LeKalbar/" target="_blank">Voir Sur Facebook</a> </p>
     </div>
     <br>
-      <div class="champ"></div>
-  </div>
-	
-  <div class="section" onclick="reveal1()" id="section2">
-		<div class="intro">
-			<img src="examples/imgs/1.png" alt="Cool" />
-			<h1>Culture</h1>
-			<p> Quel célèbre dictateur dirigea l’URSS du milieu des années 1920 à 1953 ?</p>
-      <p id="reponse1">Staline</p>
       
-		</div>
-	</div>
-	
-  <div class="section" onclick="reveal2()" id="section3">
-		<div class="intro">
-			<h1>Culture</h1>
-			<p>Dans quel pays peut-on trouver la Catalogne, l’Andalousie et la Castille ?</p>
-      <p id="reponse2" style="display: none;">l'espagne</p>
-		</div>
-	</div>
-  
-  <div class="section" onclick="reveal3()" id="section4">
-      <div class="intro">
-        <h1>Culture</h1>
-        <p>Qui a dit “ Le sort en est jeté” (Alea jacta est)?</p>
-        <p id="reponse3" style="display: none;">Jules César</p>
-      </div>
-    <a href="culture2.html">La suite (Culture)</a>
+  </div>
+  <div class="section" onclick="reveal1()" id="section2">
+    <div class="intro">
+      <img src="examples/imgs/1.png" alt="Cool" />
+      <h1>Les Régles</h1>
+      <ul>
+         <li><h2>Les Questions sont affichés et il suffit de cliquer pour obtenir la réponse !</h2></li><br>
+         <li><h2>1° Des equipes sont tiré au sort en fonctions du nombres de personnes!</h2></li><br>
+         <li><h2>2° Tirez le nom d'une equipe au hasard</h2></li><br>
+         <li><h2>3° Puis tours a tours les équipes répondent a une questions/defis de manieres collective ou individuel</h2></li><br>
+         <li><h2>4° Plusieurs thémes seront abordés et à chaques questions/defis est préciser la manieres de participer</h2></li><br>
+         <li><h2>5° l'equipe qui remport le plus grand nombre de points sur le total des questions se verra gagner diverses récompenses  </h2></li>
+      </ul>
+      <p id="reponse1" style="display: none;">le Kalbar</p>
     </div>
   </div>
+  
+  <div class="section" onclick="reveal2()" id="section3">
+    <div class="intro">
+      <img src="examples/imgs/2.png" alt="Cool" />
+      <h1>Un Example</h1>
+      <p>Quel est le nom de votre bar préféré</p>
+      <p id="reponse2" style="display: none;">le Kalbar</p>
+    </div>
+  </div>
+  
+  <div class="section" onclick="reveal3()" id="section4">
+    <img src="examples/imgs/3.png" alt="Cool" />
+      <div class="intro">
+        <h1>Les Questions Bétons</h1>
+        <p>Si votre equipe tombe sur cette question</p>
+        <p>une question sera aléatoirement choisit dans le mettre de questions</p>
+        <p> et gare a vous car ce sont des questions difficiles</p>
+        <!-- <p id="reponse3" style="display: none;">Jules César</p> -->
+      </div>
+    <h2><a href="culture2.html">C'EST PARTIS !</a></h2>
+    </div>
+  </div>
+	
   
  
 
@@ -158,25 +173,9 @@
 <script type="text/javascript" src="examples/examples.js"></script>
 <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {
-        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-        menu: '#menu',
-        afterLoad: function(origin, destination, direction){
-            //section 2
-            if(destination.index == 1){
-                document.querySelector('#section2').querySelector('img').style.left = 0 + 'px';
-                document.querySelector('#section2').querySelector('p').style.opacity = 1;
-            }
-
-            //back to original state
-            else if(origin && origin.index == 1){
-                document.querySelector('#section2').querySelector('img').style.left = 130 + '%';
-                document.querySelector('#section2').querySelector('p').style.opacity = 0;
-            }
-
-            //section 3 is using the state classes to fire the animation
-            //see the CSS code above!
-        }
+         sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+         anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+   
     });
 
     
